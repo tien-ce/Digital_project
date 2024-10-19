@@ -68,6 +68,8 @@ void HDL_DHT20_run(){
 				state = CONVERT_DATA;
 			}
 			else{
+				HAL_Delay(1000);
+				HAL_GPIO_TogglePin(GPIOA, LED_GREEN_Pin);
 				state = REQUEST_DATA;
 			}
 		}

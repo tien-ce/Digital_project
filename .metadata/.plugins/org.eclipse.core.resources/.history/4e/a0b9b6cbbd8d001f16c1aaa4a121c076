@@ -28,7 +28,7 @@ void HDL_DHT20_run(){
 	case INIT_DHT20:
 		DHT20_Init(&dht20, &hi2c1);
 	 	 HAL_Delay(100);
-		 state = CHECK_CONNECTION;
+		state = CHECK_CONNECTION;
 	 	 break;
 	case CHECK_CONNECTION:
 		if(DHT20_IsConnected(&dht20) ){
@@ -50,34 +50,15 @@ void HDL_DHT20_run(){
 		}
 		break;
 	case REQUEST_DATA:
-		if(HAL_GetTick() - dht20.lastRead >= 1000){
-			active = DHT20_RequestData(&dht20);
-			if (active == DHT20_OK){
-				HAL_Delay(100);
-				state = READ_DATA;
-			}
-		}
-		else{
-			active = DHT20_ERROR_LASTREAD;
+		active = DHT20_RequestData(&dht20);
+        if (active == DHT20_OK){
+			HAL_Delay(80);
+			state = READ_DATA;
 		}
 		break;
 	case READ_DATA:
-		if(HAL_GetTick() - dht20.lastRequest < 1000){
-			active = DHT20_ReadData(&dht20);
-			if(active == DHT20_OK){
-				state = CONVERT_DATA;
-			}
-			else{
-				state = REQUEST_DATA;
-			}
-		}
-		else{
-			active = DHT20_ERROR_READ_TIMEOUT;
-		}
 		break;
 	case CONVERT_DATA:
-		HAL_GPIO_TogglePin(GPIOA, LED_GREEN_Pin);
-		HAL_Delay(1000);
 		break;
 	case DONE:
 		break;

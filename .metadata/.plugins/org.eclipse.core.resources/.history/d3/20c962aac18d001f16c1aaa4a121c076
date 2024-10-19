@@ -65,10 +65,10 @@ void HDL_DHT20_run(){
 		if(HAL_GetTick() - dht20.lastRequest < 1000){
 			active = DHT20_ReadData(&dht20);
 			if(active == DHT20_OK){
-				state = CONVERT_DATA;
+				status = CONVERT_DATA;
 			}
 			else{
-				state = REQUEST_DATA;
+				status = REQUEST_DATA;
 			}
 		}
 		else{
@@ -76,8 +76,6 @@ void HDL_DHT20_run(){
 		}
 		break;
 	case CONVERT_DATA:
-		HAL_GPIO_TogglePin(GPIOA, LED_GREEN_Pin);
-		HAL_Delay(1000);
 		break;
 	case DONE:
 		break;

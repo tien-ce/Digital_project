@@ -65,10 +65,11 @@ void HDL_DHT20_run(){
 		if(HAL_GetTick() - dht20.lastRequest < 1000){
 			active = DHT20_ReadData(&dht20);
 			if(active == DHT20_OK){
-				state = CONVERT_DATA;
+				status = CONVERT_DATA;
 			}
 			else{
-				state = REQUEST_DATA;
+				active = DHT20_OK;
+				status = REQUEST_DATA;
 			}
 		}
 		else{
