@@ -1,0 +1,2 @@
+led7.c:9:6:led7_init	8	static
+led7.c:16:6:led7_run	32	static

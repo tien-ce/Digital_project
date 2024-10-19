@@ -1,0 +1,12 @@
+/*
+ * dht20.h
+ *
+ *  Created on: Oct 12, 2024
+ *      Author: thuyh
+ */
+
+#ifndef INC_DHT20_H_
+#define INC_DHT20_H_
+#include "main.h"
+#include "i2c_master.h"
+#endif /* INC_DHT20_H_ */

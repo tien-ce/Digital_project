@@ -1,0 +1,32 @@
+/*
+ * HDl_dht20.c
+ *
+ *  Created on: Oct 16, 2024
+ *      Author: thuyh
+ */
+#include "HDL_dht20.h"
+extern I2C_HandleTypeDef hi2c1;
+typedef enum{
+	INIT_DHT20,
+	CHECK_CONNECTION,
+	CHECK_READY,
+    REQUEST_DATA,
+    READ_DATA,
+    CONVERT_DATA,
+	DONE
+} DHT20_state;
+DHT20_state state;
+DHT20_t dht20;
+void HDL_DHT20_init(){
+	state = INIT_DHT20;
+}
+void HDL_DHT20_run(){
+	switch(state){
+	case INIT_DHT20:
+		DHT20_Init(&dht20, &hi2c1);
+		state = CHECK_CONNECTION;
+		break;
+	case CHECK_CONNECTION:
+		if()
+	}
+}

@@ -1,0 +1,9 @@
+/*
+ * i2c_master.c
+ *
+ *  Created on: Oct 12, 2024
+ *      Author: thuyh
+ */
+#include "i2c_master.h"
+
+

@@ -1,0 +1,13 @@
+/*
+ * dht20.h
+ *
+ *  Created on: Oct 12, 2024
+ *      Author: thuyh
+ */
+
+#ifndef INS_DHT20_H_
+#define INS_DHT20_H_
+
+
+
+#endif /* INS_DHT20_H_ */

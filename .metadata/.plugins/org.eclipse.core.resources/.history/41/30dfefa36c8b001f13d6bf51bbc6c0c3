@@ -1,0 +1,75 @@
+/*
+ * dht20.c
+ *
+ *  Created on: Oct 12, 2024
+ *      Author: thuyh
+ */
+#include "dht20.h"
+#include "stdio.h"
+#include "stdlib.h"
+I2C_HandleTypeDef hi2c1;
+#define Slave_address_dht20 0x38
+typedef enum{
+	INIT, CHECK_DHT20, READ_DATA,HANDLE
+} DHT20_State;
+DHT20_State state = INIT;
+
+uint8_t read_register(uint16_t register_pointer){
+	HAL_StatusTypeDef status = HAL_OK;
+	uint8_t return_vaule = 0;
+	status = I2C_Read(&hi2c1, Slave_address_dht20<<1, register_pointer, 1, &return_vaule, 1);
+	if(status!=HAL_OK){
+		Error_Handler();
+	}
+	return return_vaule;
+}
+void data_dht20(){
+	switch(state){
+	case INIT:
+		HAL_Delay(100);
+	    state = CHECK_DHT20;
+		break;
+	case CHECK_DHT20: {
+		HAL_Delay(20000);
+		uint8_t status = read_register(0x71);
+		if((status & 0x18) != 0x18){
+			HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin, SET);
+			state = INIT;
+		}
+		else{
+			state = READ_DATA;
+		}
+		HAL_Delay(200);
+		break;
+	}
+	case READ_DATA:{
+		uint8_t pData_transmit[3] = {0xAC,0x33,0x00};
+		HAL_StatusTypeDef status;
+		status = I2C_Transmit(&hi2c1, Slave_address_dht20<<1, pData_transmit, 3);
+		if(status!= HAL_OK){
+			Error_Handler();
+		}
+		HAL_Delay(80);
+		uint8_t dht20_data[7];
+		status = I2C_Receive(&hi2c1, Slave_address_dht20,dht20_data , 7);
+		if(status!= HAL_OK){
+			Error_Handler();
+		}
+		if(dht20_data[6] == 0x00){
+			state = HANDLE;
+		}
+		else{
+			state = READ_DATA;
+		}
+		break;
+	}
+	case HANDLE:
+		HAL_Delay(1000);
+		state = READ_DATA;
+		break;
+	default:
+		break;
+	}
+
+
+}

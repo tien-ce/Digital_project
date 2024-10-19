@@ -1,0 +1,15 @@
+dht20.c:12:6:DHT20_Init	16	static
+dht20.c:23:9:DHT20_Begin	16	static
+dht20.c:27:9:DHT20_IsConnected	16	static
+dht20.c:34:9:DHT20_RequestData	24	static
+dht20.c:43:9:DHT20_ReadData	32	static
+dht20.c:63:9:DHT20_Convert	32	static
+dht20.c:83:9:DHT20_Read	24	static
+dht20.c:103:7:DHT20_GetHumidity	16	static
+dht20.c:107:7:DHT20_GetTemperature	16	static
+dht20.c:111:9:DHT20_ReadStatus	32	static
+dht20.c:119:9:DHT20_IsCalibrated	16	static
+dht20.c:123:9:DHT20_IsMeasuring	16	static
+dht20.c:127:9:DHT20_CRC8	24	static
+dht20.c:141:9:DHT20_ResetSensor	24	static
+dht20.c:156:9:DHT20_ResetRegister	24	static

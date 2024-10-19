@@ -1,0 +1,11 @@
+/*
+ * i2c_master.c
+ *
+ *  Created on: Oct 12, 2024
+ *      Author: thuyh
+ */
+#include "i2c_master.h"
+HAL_StatusTypeDef I2C_Write(I2C_HandleTypeDef* hi2c, uint16_t Slave_adress, uint8_t* pData_transmit,uint16_t size){
+	return HAL_I2C_Master_Transmit_IT(hi2c, Slave_adress, pData_transmit, size);
+}
+
