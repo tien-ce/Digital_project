@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Status"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="status"/>
-			<item value="active"/>
-			<item value="statú"/>
-			<item value="stauts"/>
-			<item value="HAL_I2C_Master_Receive"/>
 			<item value=", HAL_MAX_DELAY"/>
-			<item value="HAL_MAX_DELAY"/>
+			<item value="HAL_I2C_Master_Receive"/>
 			<item value="HAL_I2C_Master_Transmit"/>
-			<item value="I2c_Transmit"/>
-			<item value="c"/>
-			<item value="I2C_TRANSMIT"/>
-			<item value="I2C_RECEIVE"/>
-			<item value=","/>
-			<item value="int"/>
-			<item value="DHT20_ADDRESS"/>
+			<item value="status_dht20"/>
+			<item value="active"/>
+			<item value="bits"/>
+			<item value="status"/>
+			<item value="dht20-&gt;lastRequest"/>
+			<item value="dht20.lastRequest"/>
+			<item value="while"/>
+			<item value="request"/>
+			<item value="request "/>
+			<item value="convert"/>
+			<item value="dht20.status"/>
+			<item value="bytes"/>
 		</list>
 		<list key="replacehistory">
-			<item value="status_dht20"/>
-			<item value="I2C_Receive"/>
 			<item value=""/>
+			<item value="I2C_Receive"/>
 			<item value="I2C_Transmit"/>
+			<item value="status_active"/>
+			<item value="bytes"/>
+			<item value="active"/>
+			<item value="dht20.status"/>
+			<item value="status"/>
+			<item value="status_dht20"/>
 			<item value="I2c_Transmit"/>
 			<item value="I2C_RECEIVE"/>
 			<item value="I2C_TRANSMIT"/>
 			<item value="Slave_address_dht20 &lt;&lt; 1"/>
 			<item value="uint8_t"/>
 			<item value="0"/>
-			<item value="1"/>
-			<item value="uint8__t"/>
-			<item value="pData_transmit"/>
-			<item value="led7"/>
-			<item value="GPIOB"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -9,10 +9,9 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include commucation/Src/subdir.mk
 -include SOW/Src/subdir.mk
 -include Drivers/STM32F1xx_HAL_Driver/Src/subdir.mk
--include Core/Startup/subdir.mk
--include Core/Src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -51,6 +50,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 Digictal_project.list \
 
+OBJCOPY_HEX += \
+Digictal_project.hex \
+
 OBJCOPY_BIN += \
 Digictal_project.bin \
 
@@ -77,6 +79,11 @@ Digictal_project.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS
 	@echo 'Finished building: $@'
 	@echo ' '
 
+Digictal_project.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "Digictal_project.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 Digictal_project.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Digictal_project.bin"
 	@echo 'Finished building: $@'
@@ -84,10 +91,10 @@ Digictal_project.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 
 # Other Targets
 clean:
-	-$(RM) $(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) Digictal_project.elf
+	-$(RM) $(OBJCOPY_HEX)$(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) Digictal_project.elf
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

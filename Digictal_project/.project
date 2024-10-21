@@ -35,5 +35,10 @@
 			<type>2</type>
 			<location>E:/SOW</location>
 		</link>
+		<link>
+			<name>commucation</name>
+			<type>2</type>
+			<location>E:/commucation</location>
+		</link>
 	</linkedResources>
 </projectDescription>

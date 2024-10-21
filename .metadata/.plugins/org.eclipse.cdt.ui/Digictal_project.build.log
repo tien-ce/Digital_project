@@ -1,20 +1,10 @@
-09:40:24 **** Incremental Build of configuration Debug for project Digictal_project ****
+11:10:54 **** Incremental Build of configuration Debug for project Digictal_project ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/HDl_dht20.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"E:/SOW/Ins" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/HDl_dht20.d" -MT"Core/Src/HDl_dht20.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/HDl_dht20.o"
-arm-none-eabi-gcc -o "Digictal_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NUCLEO\Digictal_project\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digictal_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Digictal_project.elf
- 
 arm-none-eabi-size   Digictal_project.elf 
-arm-none-eabi-objdump -h -S  Digictal_project.elf  > "Digictal_project.list"
-arm-none-eabi-objcopy  -O binary  Digictal_project.elf  "Digictal_project.bin"
    text	   data	    bss	    dec	    hex	filename
-  16960	     20	   1780	  18760	   4948	Digictal_project.elf
+     88	      8	   1568	   1664	    680	Digictal_project.elf
 Finished building: default.size.stdout
  
-Finished building: Digictal_project.bin
- 
-Finished building: Digictal_project.list
- 
 
-09:40:26 Build Finished. 0 errors, 0 warnings. (took 1s.459ms)
+11:10:55 Build Finished. 0 errors, 0 warnings. (took 474ms)
 

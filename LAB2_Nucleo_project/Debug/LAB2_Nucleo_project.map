@@ -3291,12 +3291,12 @@ Discarded input sections
  .text.DHT20_Begin
                 0x0000000000000000       0x18 ./SOW/Src/dht20.o
  .text.DHT20_IsConnected
-                0x0000000000000000       0x2c ./SOW/Src/dht20.o
+                0x0000000000000000       0x36 ./SOW/Src/dht20.o
  .rodata        0x0000000000000000        0x7 ./SOW/Src/dht20.o
  .text.DHT20_RequestData
-                0x0000000000000000       0x4c ./SOW/Src/dht20.o
+                0x0000000000000000       0x54 ./SOW/Src/dht20.o
  .text.DHT20_ReadData
-                0x0000000000000000       0x74 ./SOW/Src/dht20.o
+                0x0000000000000000       0x7a ./SOW/Src/dht20.o
  .text.DHT20_Convert
                 0x0000000000000000       0xe0 ./SOW/Src/dht20.o
  .text.DHT20_Read
@@ -3306,7 +3306,7 @@ Discarded input sections
  .text.DHT20_GetTemperature
                 0x0000000000000000       0x22 ./SOW/Src/dht20.o
  .text.DHT20_ReadStatus
-                0x0000000000000000       0x3e ./SOW/Src/dht20.o
+                0x0000000000000000       0x32 ./SOW/Src/dht20.o
  .text.DHT20_IsCalibrated
                 0x0000000000000000       0x26 ./SOW/Src/dht20.o
  .text.DHT20_IsMeasuring
@@ -3316,8 +3316,8 @@ Discarded input sections
  .text.DHT20_ResetSensor
                 0x0000000000000000       0x6e ./SOW/Src/dht20.o
  .text.DHT20_ResetRegister
-                0x0000000000000000       0xa4 ./SOW/Src/dht20.o
- .debug_info    0x0000000000000000     0x13c5 ./SOW/Src/dht20.o
+                0x0000000000000000       0xa8 ./SOW/Src/dht20.o
+ .debug_info    0x0000000000000000     0x13e0 ./SOW/Src/dht20.o
  .debug_abbrev  0x0000000000000000      0x24f ./SOW/Src/dht20.o
  .debug_aranges
                 0x0000000000000000       0x90 ./SOW/Src/dht20.o
@@ -3390,10 +3390,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 ./SOW/Src/dht20.o
  .debug_macro   0x0000000000000000       0x16 ./SOW/Src/dht20.o
  .debug_macro   0x0000000000000000       0x29 ./SOW/Src/dht20.o
- .debug_line    0x0000000000000000      0xc0f ./SOW/Src/dht20.o
- .debug_str     0x0000000000000000    0x88099 ./SOW/Src/dht20.o
+ .debug_line    0x0000000000000000      0xc07 ./SOW/Src/dht20.o
+ .debug_str     0x0000000000000000    0x880ac ./SOW/Src/dht20.o
  .comment       0x0000000000000000       0x54 ./SOW/Src/dht20.o
- .debug_frame   0x0000000000000000      0x234 ./SOW/Src/dht20.o
+ .debug_frame   0x0000000000000000      0x238 ./SOW/Src/dht20.o
  .ARM.attributes
                 0x0000000000000000       0x2d ./SOW/Src/dht20.o
  .group         0x0000000000000000        0xc ./SOW/Src/enable.o

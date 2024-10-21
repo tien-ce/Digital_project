@@ -1,2 +1,8 @@
 state
-status_dht20
+dht20.status
+dht20.lastRead
+dht20.lastRequest
+dht20.humidity
+dht20.temperature
+active
+dht20.bytes

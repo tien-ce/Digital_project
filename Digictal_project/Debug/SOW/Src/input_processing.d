@@ -27,8 +27,9 @@ SOW/Src/input_processing.o: E:/SOW/Src/input_processing.c \
  E:/SOW/Ins/input_reading.h E:/SOW/Ins/global.h \
  E:/SOW/Ins/software_timer.h E:/SOW/Ins/automatic.h E:/SOW/Ins/manual.h \
  E:/SOW/Ins/Traffic_light.h E:/SOW/Ins/LED7_SEGMENT.h \
- E:/SOW/Ins/input_processing.h E:/SOW/Ins/enable.h E:/SOW/Ins/dht20.h \
- E:/SOW/Ins/i2c_master.h
+ E:/SOW/Ins/input_processing.h E:/SOW/Ins/enable.h \
+ E:/commucation/Ins/dht20.h E:/commucation/Ins/i2c_master.h \
+ E:/commucation/Ins/i2c_master.h
 
 E:/SOW/Ins/input_processing.h:
 
@@ -100,6 +101,8 @@ E:/SOW/Ins/input_processing.h:
 
 E:/SOW/Ins/enable.h:
 
-E:/SOW/Ins/dht20.h:
+E:/commucation/Ins/dht20.h:
 
-E:/SOW/Ins/i2c_master.h:
+E:/commucation/Ins/i2c_master.h:
+
+E:/commucation/Ins/i2c_master.h:
